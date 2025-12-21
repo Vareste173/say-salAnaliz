@@ -1,0 +1,87 @@
+================================================================================
+                    GRADYAN İNİŞİ UYGULAMASI
+              Kıdem ve Maaş Veri Seti Üzerinde Lineer Regresyon
+================================================================================
+
+AMAÇ:
+Bu uygulamada, bir şirketin çalışanlarının kıdem (yıl) ve maaş verilerini
+kullanarak Gradient Descent (Gradyan İniş) algoritması ile lineer regresyon
+modeli oluşturacaksınız.
+
+VERİ SETİ: Kidem_ve_Maas_VeriSeti.csv
+- Kıdem: Çalışanın iş deneyimi (yıl)
+- Maaş: Çalışanın maaşı (TL)
+
+================================================================================
+GÖREVLER:
+================================================================================
+
+1. VERİ OKUMA VE GÖRSELLEŞTIRME
+   ----------------------------------------------------------------------------
+   a) Kidem_ve_Maas_VeriSeti.csv dosyasını okuyun
+   b) Veri setini inceleyin (ilk 5 satır, boyut, istatistiksel özet)
+   c) Kıdem-Maaş ilişkisini scatter plot ile görselleştirin
+
+
+2. LİNEER REGRESYON MODELİ
+   ----------------------------------------------------------------------------
+   Lineer regresyon denklemi: y = w * x + b
+
+   Burada:
+   - x: Kıdem (bağımsız değişken)
+   - y: Maaş (bağımlı değişken)
+   - w: Eğim (weight/ağırlık)
+   - b: Kesişim noktası (bias)
+
+   a) w ve b parametrelerini rassal değerlerle başlatın
+
+
+3. MALIYET FONKSİYONU
+   ----------------------------------------------------------------------------
+   Ortalama Kare Hata (Mean Squared Error - MSE) kullanın:
+
+   J(w,b) = (1/2n) * Σ(y_tahmin - y_gerçek)²
+
+   a) Maliyet fonksiyonunu hesaplayan bir fonksiyon yazın
+
+
+4. GRADYAN İNİŞİ ALGORİTMASI
+   ----------------------------------------------------------------------------
+   Parametreleri güncellemek için:
+
+   w_yeni = w_eski - α * (∂J/∂w)
+   b_yeni = b_eski - α * (∂J/∂b)
+
+   Türevler:
+   ∂J/∂w = (1/n) * Σ(y_tahmin - y_gerçek) * x
+   ∂J/∂b = (1/n) * Σ(y_tahmin - y_gerçek)
+
+   Parametreler:
+   - Öğrenme oranı (α): 0.0001
+   - İterasyon sayısı: 1000
+
+   a) Gradient descent algoritmasını uygulayın
+   b) Her iterasyonda maliyet değerini kaydedin
+   c) Optimal w ve b değerlerini bulun
+
+
+5. MODEL EĞİTİMİ VE GÖRSELLEŞTIRME
+   ----------------------------------------------------------------------------
+   a) Modeli eğitin
+   b) Maliyet fonksiyonunun iterasyonlara göre değişimini çizin
+   c) Eğitilmiş modelin regresyon doğrusunu veri noktaları ile birlikte çizin
+
+
+6. MODEL DEĞERLENDİRME
+   ----------------------------------------------------------------------------
+   a) Final MSE değerini hesaplayın
+   b) R² (R-kare) skorunu hesaplayın
+   c) Örnekler:
+      - 5 yıl kıdemi olan birinin maaşını tahmin edin
+      - 7.5 yıl kıdemi olan birinin maaşını tahmin edin
+      - 12 yıl kıdemi olan birinin maaşını tahmin edin
+
+
+
+
+
